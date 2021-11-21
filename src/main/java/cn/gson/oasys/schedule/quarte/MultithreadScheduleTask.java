@@ -1,0 +1,38 @@
+package cn.gson.oasys.schedule.quarte;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDateTime;
+
+//@Component注解用于对那些比较中立的类进行注释；
+//相对与在持久层、业务层和控制层分别采用 @Repository、@Service 和 @Controller 对分层中的类进行注释
+@Component
+//@EnableScheduling   // 1.开启定时任务
+@EnableAsync        // 2.开启多线程
+
+//默认条件注解是开启的，现在采用配置文件的变量来手动控制定时任务是否执行
+@ConditionalOnProperty(prefix = "scheduling", name = "enabled", havingValue = "false")
+
+public class MultithreadScheduleTask {
+
+    @Async
+    @Scheduled(fixedDelay = 1000) //间隔一秒
+    public void first() throws InterruptedException {
+        System.out.println("第一个定时任务开始 : " + LocalDateTime.now().toLocalTime() + "\r\n线程 : " + Thread.currentThread().getName());
+        System.out.println();
+        Thread.sleep(1000 * 10);
+    }
+
+    @Async
+    @Scheduled(fixedDelay = 2000) //间隔两秒
+    public void second() throws InterruptedException {
+        System.out.println("第二个定时任务开始 : " + LocalDateTime.now().toLocalTime() + "\r\n线程 : " + Thread.currentThread().getName());
+        System.out.println();
+        Thread.sleep(1000 * 10);
+    }
+}

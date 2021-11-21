@@ -69,7 +69,7 @@ public class AttendceController {
 		ia=ia.getLocalHost();
 		String attendip=ia.getHostAddress();
 		// 时间规范
-		String start = "08:00:00", end = "17:00:00";
+		String start = "00:00:00", end = "23:59:00";
 		service.addConverter(new StringtoDate());
 		// 状态默认是正常
 		long typeId, statusId = 10;

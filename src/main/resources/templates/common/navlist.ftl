@@ -9,15 +9,15 @@
 				<div class="modal-body" style="text-align: center;">
 					<h4>项目的发展离不开您的支持，请作者喝杯咖啡吧！</h4>
 					<div style="display: inline-block">
-						<h4>支付宝</h4>
-						<img src="http://pic.yupoo.com/felixluo/93036494/9a0646aa.jpeg" alt="zhifubao.jpeg" width="150"  align=center />
+<#--						<img src="http://pic.yupoo.com/felixluo/93036494/9a0646aa.jpeg" alt="zhifubao.jpeg" width="150"  align=center />-->
+						<img src="http://pic.yupoo.com/ljlong/62d45e16/01661a9e.jpg" alt="zhifubao.jpg" width="150"  align=center />
 					</div>
 					<div style="display: inline-block;margin: 0px 20px 0 20px;">
-						<h4>微信</h4>
-						<img src="http://pic.yupoo.com/felixluo/66100130/455e5d47.jpeg" alt="weichat.jpeg" width="150"  align=center />
+<#--						<img src="http://pic.yupoo.com/felixluo/66100130/455e5d47.jpeg" alt="weichat.jpeg" width="150"  align=center />-->
+						<img src="http://pic.yupoo.com/ljlong/3d2b60ba/3ff1a821.jpg" alt="weixin.jpg" width="150"  align=center />
 					</div>
 					<div style="display: inline-block;">
-						<img  src="http://pic.yupoo.com/felixluo/dd33c805/fb3b68c1.jpeg" alt="me.jpeg"  width="150"  align=center />
+						<img  src="http://pic.yupoo.com/ljlong/2df1795b/c31a52e9.jpg" alt="me.jpeg"  width="150"  align=center />
 					</div>
 					<div style="    display: inline-block;    border-left: 2px solid green;    padding: 10px 5px;">
 						捐赠 <span style="    background-color: #009688;    color: #ffffff;    padding: 0 6px; border-radius: 2px;">9.9元</span>
@@ -78,7 +78,7 @@
 		<li class="dropdown">
 		<!--设置导航栏头像面板--> 
 		<a href="#" class="green-none white" data-toggle="dropdown">
-				<img src="/image/${(user.imgPath)!'/timg.jpg'}" class="user-image" /> <span>${user.userName}</span>
+				<img src="/images/${(user.imgPath)!'/timg.jpg'}" class="user-image" /> <span>${user.userName}</span>
 		</a> <!--设置点击按钮弹出用户面板层-->
 			<ul class="dropdown-menu" style="padding:0;">
 				<li class="user-header green"><img src="/image/${(user.imgPath)!'/timg.jpg'}"
